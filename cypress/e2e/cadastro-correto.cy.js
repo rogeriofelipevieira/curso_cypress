@@ -5,10 +5,6 @@ describe('Página de Cadastro', () => {
 })
 
   it('Deve preencher os campos do formulario corretamente para cadastrar um novo usuário', () => {
-    cy.get('[data-test="input-name"]').type('Rogerio felipe');
-    cy.get('[data-test="input-email"]').type('rogeriofelipe@email.com');
-    cy.get('[data-test="input-password"]').type('Senha123');
-    cy.get('[data-test="input-confirm-password"]').type('Senha123');
-    cy.get('[data-test="submit-button"]').click();
+    cy.cadastrar('Rogerio felipe', 'rogeriofelipe@email.com', 'Senha123')
   })
 })
